@@ -1,0 +1,14 @@
+.left-box,.right-box{
+    background: #e5e5e5;
+}
+
+.left-box{
+    border: #f2f2f2 1px solid;
+    width: 45%;
+    height:1200px;
+}
+.right-box{
+    border: #f2f2f2 1px solid;
+    width: 45%;
+    height: 800px;
+}

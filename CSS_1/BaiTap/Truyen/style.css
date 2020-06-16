@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    background-image: url("backg.jpg");
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#header{
+    background: darkslategrey;
+    height: 100px;
+    width: 100%;
+}
+#headerLink{
+    height:50px;
+    width: 100%;
+    border: 1px solid black;
+}
+.sidebar{
+    height:500px;
+    width: 15%;
+    float: left;
+}
+.content{
+    height: 500px;
+    width: 85%;
+    float: right;
+}
+#footer{
+    height: 100px;
+    width: 100%;
+    clear: both;
+}
+#search{
+    float: right;
+    padding-right: 70px;
+}
+#header-left{
+    padding-left: 50px;
+}
+#header-right{
+    padding-right: 50px;
+    float:right;
+}
+.headerLink{
+    font-size: 20px;
+}
+.sidebar1 {
+    /*border: 2px solid black;*/
+    width: 55%;
+
+}
+.sidebar .sidebar1 a{
+    color: black;
+}

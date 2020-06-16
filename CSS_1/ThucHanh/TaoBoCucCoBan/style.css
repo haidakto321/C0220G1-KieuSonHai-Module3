@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+#header{
+    background: blue;
+    height: 100px;
+    width: 100%;
+}
+#headlink{
+    background: brown;
+    height:50px;
+    width: 100%;
+}
+#left{
+    background: aqua;
+    height: 500px;
+    width: 20%;
+    float: left;
+}
+#content{
+    background: yellow;
+    height: 500px;
+    width: 60%;
+    float: left;
+}
+#right{
+    background: aqua;
+    height: 500px;
+    width: 20%;
+    float: right;
+}
+#footer{
+    background: darkviolet;
+    height: 100px;
+    width: 100%;
+    clear: both;
+}

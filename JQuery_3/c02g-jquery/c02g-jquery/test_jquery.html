@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker();
+            $( "#dialog" ).dialog();
+        } );
+    </script>
+</head>
+<body>
+
+    <button id="change_color">Change color</button>
+    <h2 id="hello_jquery">Hello JQuery!</h2>
+    <div class="new_post"></div>
+
+    <p>Date: <input type="text" id="datepicker"></p>
+
+    <div id="dialog" title="Basic dialog">
+        <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // $("#change_color").click(function() {
+            //     $("#hello_jquery").toggle();
+            // });
+
+            // $("#change_color").mouseover(function() {
+            //     $("#hello_jquery").show();
+            // });
+
+            $("#change_color").mouseover(function() {
+                let result2 = null;
+                $.ajax({
+                    type: "POST", //GET, DELETE, PUT...
+                    url: "..",
+                    data: "{empid: " + empid + "}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    // dataType: "text",
+                    success: function(result){
+                        alert(result.d);
+                        console.log(result);
+                        result2 = result;
+                    },
+                    error: function(result) {
+
+                    }
+                });
+                let htmlCurrent = $(".new_post").html();
+                $(".new_post").html(htmlCurrent + result2);
+            });
+        });
+    </script>
+</body>
+</html>

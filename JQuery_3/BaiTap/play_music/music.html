@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--<div>-->
+<!--    <div class="box1">-->
+<!--        <ol id="selectable">-->
+<!--            <li class="ui-widget-content"><a onclick="click1()">Bai 1</a></li>-->
+<!--            <li class="ui-widget-content"><a onclick="click2()">Bai 2</a></li>-->
+<!--            <li class="ui-widget-content"><a onclick="click3()">Bai 3</a></li>-->
+<!--            <li class="ui-widget-content"><a onclick="click4()">Bai 4</a></li>-->
+<!--        </ol>-->
+<!--    </div>-->
+<!--</div>-->
+<button id="song1" >Song 1</button>
+<button id="song2">Song 2</button>
+<button id="song3">Song 3</button>
+<button id="song4">Song 4</button>
+<script>
+    $('#song1').on('click', function () {
+        // let obj = document.createElement("audio");
+        // obj.src = "source/16 Sakura, Sakura _ Japanize Dream...__PVLX87ZUhU.mp3";
+        let myAudio = document.getElementById("myAudio");
+        myAudio.src = "source/16 Sakura, Sakura _ Japanize Dream...__PVLX87ZUhU.mp3";
+        let isPlaying = false;
+
+        // function togglePlay() {
+            if (isPlaying) {
+                myAudio.pause()
+            } else {
+                myAudio.play();
+            }
+        // };
+        myAudio.onplaying = function() {
+            isPlaying = true;
+        };
+        myAudio.onpause = function() {
+            isPlaying = false;
+        };
+    });
+
+    $('#song2').on('click', function () {
+        let obj = document.createElement("audio");
+        obj.src = "source/Mike Oldfield ft. Maggie Reilly - Moonlight Shadow.mp3";
+        obj.play();
+    });
+    $('#song3').on('click', function () {
+        let obj = document.createElement("audio");
+        obj.src = "source/The Weeknd - Blinding Lights.mp3";
+        obj.play();
+    });
+    $('#song4').on('click', function () {
+        let obj = document.createElement("audio");
+        obj.src = "source/vocal_fullmv_1469401.mp3";
+        obj.play();
+    });
+    function click1() {
+
+        document.getElementById("showText").innerText = "Bai 1";
+        document.getElementById("showAudio").src = "source/16 Sakura, Sakura _ Japanize Dream...__PVLX87ZUhU.mp3";
+
+    }
+    function click2() {
+
+        document.getElementById("showText").innerText = "Bai 2";
+        document.getElementById("showAudio").src = "Mike Oldfield ft. Maggie Reilly - Moonlight Shadow.mp3";
+    }
+    function click3() {
+
+        document.getElementById("showText").innerText = "Bai 3";
+        document.getElementById("showAudio").src = "The Weeknd - Blinding Lights.mp3";
+    }
+    function click4() {
+
+        document.getElementById("showText").innerText = "Bai 4";
+        document.getElementById("showAudio").src = "vocal_fullmv_1469401.mp3";
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<button class="play" id="btn1">Song 1</button>
+<button class="play" id="btn2">Song 2</button>
+<button class="play" id="btn3">Song 3</button>
+<button class="play" id="btn4">Song 4</button>
+
+<!-- SOUNDS -->
+<audio id="sound1">
+    <source src="source/16 Sakura, Sakura _ Japanize Dream...__PVLX87ZUhU.mp3" />
+</audio>
+
+<audio id="sound2">
+    <source src="source/Mike Oldfield ft. Maggie Reilly - Moonlight Shadow.mp3" />
+</audio>
+
+<audio id="sound3">
+    <source src="source/The Weeknd - Blinding Lights.mp3" />
+</audio>
+<audio id="sound4">
+    <source src="source/vocal_fullmv_1469401.mp3" />
+</audio>
+<script>
+    $('.play').on('click',(function(){
+        let $this = $(this);
+        let id = $this.attr('id').replace(/btn/, '');
+        $this.toggleClass('active');
+        if($this.hasClass('active')){
+            $this.text('pause');
+            $('audio[id^="sound"]')[id-1].play();
+        } else {
+            $this.text('play');
+            $('audio[id^="sound"]')[id-1].pause();
+        }
+    }));
+</script>
+</body>
+</html>
