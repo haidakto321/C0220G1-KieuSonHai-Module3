@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
-  output: number;
+  output: any;
   first: number;
   second: number;
   operator = '+';
@@ -35,7 +35,11 @@ export class CalculatorComponent implements OnInit {
         this.output = this.first * this.second;
         break;
       case '/':
-        this.output = this.first / this.second;
+        if (this.second === 0) {
+          this.output = 'zxc';
+        } else {
+          this.output = this.first / this.second;
+        }
         break;
     }
   }

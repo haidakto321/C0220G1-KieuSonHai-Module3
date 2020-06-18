@@ -7,14 +7,23 @@ import {Component, OnInit} from '@angular/core';
 })
 export class Calculator2Component implements OnInit {
   output: number;
+  error: string;
   first: number;
   second: number;
   operator: string;
-
-  selectChange(value) {
+  getStyle(second, operator) {
+    let display = '';
+    if (second === 0 && operator === '/') {
+      display = 'none';
+    } else {
+      display = '';
+    }
+    return display;
+  }
+selectChange(value) {
     this.operator = value;
   }
-  calculate() {
+calculate() {
     switch (this.operator) {
       case '+':
         this.output = this.first + this.second;
@@ -26,15 +35,19 @@ export class Calculator2Component implements OnInit {
         this.output = this.first * this.second;
         break;
       case '/':
-        this.output = this.first / this.second;
+        if (this.second === 0) {
+         this.error = 'ads';
+        } else{
+          this.output = this.first / this.second;
+        }
         break;
     }
   }
 
-  constructor() {
+constructor() {
   }
 
-  ngOnInit(): void {
+ngOnInit(): void {
   }
 
 }
