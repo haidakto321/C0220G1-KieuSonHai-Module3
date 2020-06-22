@@ -1,0 +1,9 @@
+<p>directive-ex works!</p>
+<ng-container *ngIf="showTableStudent else elseBlock">
+<div *ngFor="let student of students" >
+  <app-directive-ex-child [id]="student.id" [name]="student.name"></app-directive-ex-child>
+</div>
+</ng-container>
+<ng-container #elseBlock>
+Hello hidden
+</ng-container>

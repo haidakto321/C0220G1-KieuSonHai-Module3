@@ -1,0 +1,5 @@
+<form (submit)="onSubmit(registerForm)" #registerForm="ngForm" novalidate>
+  <input [(ngModel)]="user.name"
+         name="name" type="text">
+  <input type="submit" value="Register" />
+</form>

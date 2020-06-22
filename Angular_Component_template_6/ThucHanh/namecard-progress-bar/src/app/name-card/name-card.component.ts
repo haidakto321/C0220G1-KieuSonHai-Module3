@@ -12,12 +12,6 @@ export class NameCardComponent implements OnInit {
   @Input() cardName: string;
   @Input() email: string;
   @Input() phone: string;
-  namecard = [
-    {cardName: 'Professional Dev', email: 'prodev1@abc.xyz', phone: '0123456789'},
-    {cardName: 'Professional Tester', email: 'protest@abc.xyz', phone: '0123456789'},
-    {cardName: 'Professional Dev2', email: 'prodev2@abc.xyz', phone: '0123456789'}
-  ];
-
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {

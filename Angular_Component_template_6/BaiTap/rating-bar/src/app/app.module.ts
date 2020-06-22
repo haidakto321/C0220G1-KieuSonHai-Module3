@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { RatingBarComponent } from './rating-bar/rating-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RatingBarExampleComponent } from './rating-bar-example/rating-bar-example.component';
+import { CountdownComponent } from './countdown/countdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RatingBarComponent,
-    RatingBarExampleComponent
+    RatingBarExampleComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,

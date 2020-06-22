@@ -1,0 +1,4 @@
+<h3>Output from child to parent</h3>
+<p>{{valueParentReceived}}</p>
+<p>parent works!</p>
+<app-child [valueChildReceive]="valueToChild" (eventChild)="receiveValueFromChild($event)"></app-child>

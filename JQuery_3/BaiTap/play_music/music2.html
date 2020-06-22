@@ -9,25 +9,20 @@
 </head>
 <body>
     <script>
-        $.ajax({
-            'dataType': 'xml',
-            'success': function(xml)
-            {
-                $(xml).find('item').each(function()
-                {
-                    var image = $(this).find('image').text();
-                    var description = $(this).find('description').text();
-
-                    $('<div id="music" />')
-                        .append($('<div id="albumcover" />').append($('<img />').attr('src', image)))
-                        .append($('<div id="songdescription" />').text(description))
-                        .appendTo('body');
-                });
-
-                // Add the code for the carousel here.
-            },
-            'type': 'get',
-            'url': 'source/s1.xml'
+        $(document).ready(function(){
+            $.ajax({
+                type: 'GET',
+                url: 'mp3.xml',
+                dataType: 'xml',
+                success: function (xml) {
+                    let mp3 = $(xml).find('location').text();
+                    let name = $(xml).find('title').text();
+                    $("#player").vpplayer({
+                        src: mp3,
+                        trackName: name
+                    })
+                }
+            })
         });
     </script>
 </body>
