@@ -1,0 +1,27 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~font-awesome/css/font-awesome.css';
+.card-header{
+  height: 80px;
+  width: 100%;
+}
+.sidebar a{
+  margin: 20px;
+}
+#left-navbar, #right-navbar{
+  background: slategrey;
+  height: auto;
+  font-size: large;
+}
+#left-navbar a{
+ margin: 20px;
+  color: darkblue;
+}
+#sidebar{
+  width: 15%;
+  height: 550px;
+  background: lightgrey;
+}
+#sidebar div{
+  width: auto;
+  text-align: center;
+}

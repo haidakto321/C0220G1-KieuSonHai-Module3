@@ -1,0 +1,114 @@
+{
+  "studentList": [
+    {
+      "id": 1,
+      "name": "Tien",
+      "dateOfBirth": "2k"
+    },
+    {
+      "id": 2,
+      "name": "Long",
+      "dateOfBirth": "1999"
+    },
+    {
+      "id": 3,
+      "name": "Khanh",
+      "dateOfBirth": "2k1"
+    },
+    {
+      "id": 4,
+      "name": "Khanh",
+      "dateOfBirth": "2k1"
+    }
+  ],
+  "typeOfCustomer": [
+    {
+      "id": 1,
+      "name": "Member"
+    },
+    {
+      "id": 2,
+      "name": "Silver"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Platinum"
+    },
+    {
+      "id": 5,
+      "name": "Diamond"
+    }
+  ],
+  "customerList": [
+    {
+      "name": "kh1",
+      "email": "info@example.com",
+      "birthday": "2000-06-01",
+      "gender": "male",
+      "address": "Đà Nẵng",
+      "cmnd": "123456789",
+      "phone": "+84987456098",
+      "idCustomer": "KH-5172",
+      "id": 1
+    },
+    {
+      "name": "kh2",
+      "email": "info@example.com",
+      "birthday": "1999-06-20",
+      "gender": "female",
+      "address": "Quảng Nam",
+      "cmnd": "987654123",
+      "phone": "+84987125841",
+      "idCustomer": "KH-3759",
+      "id": 2
+    },
+    {
+      "name": "kh3",
+      "email": "info@example.com",
+      "birthday": "1998-06-13",
+      "gender": "male",
+      "address": "Đà Nẵng",
+      "cmnd": "57971352165",
+      "phone": "+84578649258",
+      "idCustomer": "KH-6802",
+      "id": 3
+    },
+    {
+      "name": "kh4",
+      "email": "info@example.com",
+      "birthday": "2020-06-11",
+      "gender": "male",
+      "address": "Quảng Trị",
+      "cmnd": "32176783481",
+      "phone": "+841649020128",
+      "idCustomer": "KH-8253",
+      "id": 4
+    },
+    {
+      "name": "kh5",
+      "email": "info@example.com",
+      "birthday": "2020-07-06",
+      "gender": "female",
+      "address": "Huế",
+      "cmnd": "321216911",
+      "phone": "+841649030875",
+      "idCustomer": "KH-8066",
+      "id": 5
+    },
+    {
+      "name": "kh6",
+      "email": "info@example.com",
+      "birthday": "2020-11-22",
+      "gender": "male",
+      "address": "Đà Nẵng",
+      "cmnd": "233216718",
+      "phone": "+84167920468",
+      "idCustomer": "KH-2822",
+      "id": 6
+    }
+  ]
+}

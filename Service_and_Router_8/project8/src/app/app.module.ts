@@ -11,6 +11,19 @@ import { TodoComponent } from './todo/todo.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
+import {ImageGalleryModule} from './image-gallery/image-gallery.module';
+import {GalleryConfig} from './image-gallery/token';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {ImgSliderModule} from './img-slider/img-slider.module';
+import { ImgComponent } from './img/img.component';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
+import {BlogDetailComponent} from './blog/blog-detail/blog-detail.component';
+import {BlogEditComponent} from './blog/blog-edit/blog-edit.component';
+import {BlogComponent} from './blog/blog.component';
+import {BlogModule} from './blog/blog.module';
+import { TodoJsonComponent } from './todo-json/todo-json.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +34,25 @@ import { RegisterComponent } from './register/register.component';
     DictionaryComponent,
     TodoComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    StudentListComponent,
+    StudentDetailComponent,
+    ImgComponent,
+    TodoJsonComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        ReactiveFormsModule
-    ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    ImageGalleryModule,
+    ImgSliderModule,
+    NgbModule,
+    HttpClientModule,
+    BlogModule
+  ],
+  providers: [
+    {provide: GalleryConfig, useValue: 2},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

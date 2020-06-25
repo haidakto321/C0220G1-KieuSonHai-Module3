@@ -1,0 +1,28 @@
+<table class="table table-dark table-hover">
+  <tr>
+    <th>Mã khách hàng</th>
+    <th>Tên khách hàng</th>
+    <th>Email</th>
+  </tr>
+<ng-container *ngFor="let customer of customerList ">
+  <tr>
+    <td>
+      {{customer.idCustomer}}
+    </td>
+    <td>
+      {{customer.name}}
+    </td>
+    <td>
+      {{customer.email}}
+    </td>
+    <td>
+      <a routerLink="customer-detail/{{customer.id}}">Chi tiết</a>
+    </td>
+    <td>
+      <a routerLink="customer-delete/{{customer.id}}" style="color: red">Xóa</a>
+    </td>
+  </tr>
+</ng-container>
+</table>
+<!--<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
+<router-outlet></router-outlet>

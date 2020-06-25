@@ -21,6 +21,7 @@ export class YoutubePlayerComponent implements OnInit {
     this.sub = this.activatedRouter.paramMap.subscribe((paramMap: ParamMap) => {
       const id = paramMap.get('id');
       this.song = this.youtubeService.find(id);
+      console.log(this.song);
     });
   }
   getSrc() {

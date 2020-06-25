@@ -16,6 +16,12 @@
         <input type="password" class="form-control" formControlName="password">
       </label>
     </div>
+    <div class="alert alert-danger" role="alert" *ngIf="registerForm.get('pwGroup.password').invalid && registerForm.get('pwGroup.password').touched"  >
+      Not Empty
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="registerForm.get('pwGroup.password').hasError('minlength') && registerForm.get('pwGroup.password').touched">
+     Password required atleast 6 characters!
+    </div>
     <div class="form-group row">
       <label class="col">
         Confirm Password
@@ -23,14 +29,12 @@
       </label>
     </div>
   </fieldset>
+
   <div class="alert alert-danger" role="alert" *ngIf="registerForm.hasError('passwordnotmatch', ['pwGroup']) &&
       registerForm.get('pwGroup').touched">
     Password does not match!
   </div>
-  <div class="alert alert-danger" role="alert" *ngIf="registerForm.hasError('minlength',['pwGroup'])&&
-   registerForm.get('pwGroup').touched">
-    Password require atleast 6 characters!
-  </div>
+
   <div class="form-group row">
     <label class="col">
       Country

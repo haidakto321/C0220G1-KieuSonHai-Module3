@@ -1,0 +1,23 @@
+<table class="table table-dark table-hover">
+  <tr>
+    <th>Mã khách hàng</th>
+    <th>Tên</th>
+    <th>Email</th>
+    <th>Ngày sinh</th>
+    <th>Giới tính</th>
+    <th>CMND</th>
+    <th>Địa chỉ</th>
+    <th>Số điện thoại</th>
+  </tr>
+  <tr>
+    <td>{{customer.idCustomer}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.birthday}}</td>
+    <td>{{customer.gender}}</td>
+    <td>{{customer.cmnd}}</td>
+    <td>{{customer.address}}</td>
+    <td>{{customer.phone}}</td>
+  </tr>
+</table>
+<a [routerLink]="['/customer-edit', customer.id]">Cập nhật</a>

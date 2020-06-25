@@ -14,5 +14,10 @@ export class YoutubeService {
   constructor() { }
   find(id: string) {
     return this.playlist.find(item => item.id === id);
+    // return this.playlist.find(a);
+    //
+    // function a(item) {
+    //   return item.id === id;
+    // }
   }
 }
